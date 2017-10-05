@@ -13,4 +13,5 @@ public class TestConstants {
 
     public static final String XPATH_DECLARED_DEPUTIES_NUMBER = "//div[@id=\"search_results\"]/p";
     public static final String XPATH_SEARCH_RESULTS_BLOCK = "//div[@id='search_results']/ul/li";
+    public static final String XPATH_SEARCH_RESULTS_NUMBER = "//div[@class=\"information_block_ins\"]/h3/a[@class=\"show_section\"]";
 }

@@ -16,7 +16,7 @@ public class MyWebDriver {
             Instance = instance;
         }
 
-        public static void Initialize(){
+        public static void Initialize() {
             Instance = new ChromeDriver();
             Instance.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
         }
