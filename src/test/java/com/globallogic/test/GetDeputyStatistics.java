@@ -9,6 +9,7 @@ import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
+import java.util.Arrays;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
@@ -52,11 +53,11 @@ public class GetDeputyStatistics {
                 allDeputies[n].setPresent(Integer.valueOf(list2.get(0).getText()));
 
             }
-            else System.out.println("1");
+            else System.out.println("---==");
 
             MyWebDriver.Instance.manage().timeouts().implicitlyWait(1, TimeUnit.SECONDS);
         }
-        System.out.println(deputiesNames);
+        System.out.println(Arrays.toString(deputiesNames));
 
     }
 }
