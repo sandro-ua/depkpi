@@ -1,0 +1,4 @@
+<suite name="Suite1" verbose="1" >
+    <test name="SearchResultNumberIsTheSameAsActuallyDisplayed" >
+    </test>
+</suite>
