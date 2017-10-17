@@ -10,7 +10,7 @@ import org.testng.annotations.Test;
 
 public class SearchDeputyTests {
 
-    @BeforeClass
+    @BeforeClass (alwaysRun = true)
     public static void Setup() {
         System.setProperty("webdriver.chrome.driver", "src/resources/chromedriver.exe");
         MyWebDriver.Initialize();
@@ -45,7 +45,7 @@ public class SearchDeputyTests {
         Assert.assertEquals(deputyNumberAtSearch, GoToTopNumber);
     }
 
-    @AfterClass
+    @AfterClass (alwaysRun = true)
     public static void TearDown()
     {
         MyWebDriver.Instance.quit();

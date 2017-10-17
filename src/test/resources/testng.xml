@@ -1,9 +1,19 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 
-<suite name="Suite1" verbose="1" >
-    <test name="test1" >
+<suite name="Suite1" verbose="1">
+
+    <test name="sanity">
+        <groups>
+            <run>
+                <include name="sanity"/>
+            </run>
+        </groups>
         <classes>
-            <class name="com.globallogic.test.SearchDeputyTests" />
+            <class name="com.globallogic.test.SearchDeputyTests"/>
+            <class name="com.globallogic.test.GetDeputyStatistics"/>
+            <class name="com.globallogic.framework.MyWebDriver"/>
+            <class name="com.globallogic.framework.TestConstants"/>
+            <class name="com.globallogic.framework.SearchDeputiesPage"/>
         </classes>
     </test>
 </suite>
