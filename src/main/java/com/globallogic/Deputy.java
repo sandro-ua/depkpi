@@ -13,7 +13,7 @@ public class Deputy {
     private int absent;
 
 
-    public Deputy(String fullName, String party, String linkToProfile, int pysmovaReestracia, int illness, int usinessTrip, int unknown, int present, int absent) {
+    public Deputy (String fullName, String party, String linkToProfile, int pysmovaReestracia, int illness, int usinessTrip, int unknown, int present, int absent) {
         this.fullName = fullName;
         this.party = party;
         this.linkToProfile = linkToProfile;

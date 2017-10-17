@@ -36,7 +36,14 @@ public class SearchDeputyTests {
         Assert.assertEquals(deputyNumberAtSearch, actualDeputiesAtSearch, "Search result items number is not the same as declared");
     }
 
+    @Test (groups = {"search suite"})
+    public void GoToTopCount () {
+        SearchDeputiesPage.GoToDeputyList();
+        int deputyNumberAtSearch  = SearchDeputiesPage.GetDeclaredDeputiesNumber();
+        int GoToTopNumber = SearchDeputiesPage.GetGoToTopLinkCount();
 
+        Assert.assertEquals(deputyNumberAtSearch, GoToTopNumber);
+    }
 
     @AfterClass
     public static void TearDown()

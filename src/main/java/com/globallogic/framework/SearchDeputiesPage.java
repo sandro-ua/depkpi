@@ -13,17 +13,19 @@ public class SearchDeputiesPage {
 
     public static int GetDeclaredDeputiesNumber (){
         String numberMessageAtSearch = MyWebDriver.Instance.findElement(By.xpath(TestConstants.XPATH_DECLARED_DEPUTIES_NUMBER)).getText();
-        int deputyNumberAtSearch = Integer.parseInt(numberMessageAtSearch.split(" ")[1]);
-        return deputyNumberAtSearch;
+        return Integer.parseInt(numberMessageAtSearch.split(" ")[1]);
         }
 
     public static int GetSearchResultsNumber (){
         String numberMessageTop = MyWebDriver.Instance.findElement(By.xpath(TestConstants.XPATH_SEARCH_RESULTS_NUMBER)).getText();
-        int deputyNumberTop = Integer.parseInt(numberMessageTop.split(" ")[2]);
-        return deputyNumberTop;
+        return Integer.parseInt(numberMessageTop.split(" ")[2]);
     }
 
     public static int SearchResultsBlockCount () {
         return MyWebDriver.Instance.findElements(By.xpath(TestConstants.XPATH_SEARCH_RESULTS_BLOCK)).size();
+    }
+
+    public static int GetGoToTopLinkCount () {
+        return MyWebDriver.Instance.findElements(By.xpath(TestConstants.XPATH_SEARCH_GO_TO_TOP_)).size();
     }
 }
