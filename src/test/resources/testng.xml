@@ -10,10 +10,6 @@
         </groups>
         <classes>
             <class name="com.globallogic.test.SearchDeputyTests"/>
-            <class name="com.globallogic.test.GetDeputyStatistics"/>
-            <class name="com.globallogic.framework.MyWebDriver"/>
-            <class name="com.globallogic.framework.TestConstants"/>
-            <class name="com.globallogic.framework.SearchDeputiesPage"/>
         </classes>
     </test>
 </suite>
