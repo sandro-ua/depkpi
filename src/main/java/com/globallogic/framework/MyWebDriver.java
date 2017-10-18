@@ -20,7 +20,7 @@ public class MyWebDriver {
 
         public static void Initialize() {
 
-            System.setProperty("webdriver.chrome.driver", "/resources/chromedriver.exe");
+            System.setProperty("webdriver.chrome.driver", "src/resources/chromedriver.exe");
             ChromeOptions chromeOptions = new ChromeOptions();
             chromeOptions.addArguments("--headless");
             Instance = new ChromeDriver(chromeOptions);
