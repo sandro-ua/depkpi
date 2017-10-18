@@ -19,7 +19,7 @@ public class MyWebDriver {
         }
 
         public static void Initialize() {
-            System.setProperty("webdriver.chrome.driver", "C:\\Program Files (x86)\\Jenkins\\workspace\\deputykpi_1\\src\\resources");
+            System.setProperty("webdriver.chrome.driver", "C:\\Program Files (x86)\\Jenkins\\workspace\\deputykpi_1\\src\\resources\\chromedriver.exe");
             ChromeOptions chromeOptions = new ChromeOptions();
             //chromeOptions.addArguments("--headless");
             //chromeOptions.setBinary("src/resources/chromedriver.exe");
