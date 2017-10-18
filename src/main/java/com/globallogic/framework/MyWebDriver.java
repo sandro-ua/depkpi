@@ -22,7 +22,7 @@ public class MyWebDriver {
 
             System.setProperty("webdriver.chrome.driver", "src/resources/chromedriver.exe");
             ChromeOptions chromeOptions = new ChromeOptions();
-            chromeOptions.addArguments("--headless");
+            //chromeOptions.addArguments("--headless");
             chromeOptions.setBinary("src/resources/chromedriver.exe");
             Instance = new ChromeDriver(chromeOptions);
             Instance.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
