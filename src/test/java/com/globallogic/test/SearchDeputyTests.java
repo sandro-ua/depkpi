@@ -12,7 +12,6 @@ public class SearchDeputyTests {
 
     @BeforeClass (alwaysRun = true)
     public static void Setup() {
-        System.setProperty("webdriver.chrome.driver", "src/resources/chromedriver.exe");
         MyWebDriver.Initialize();
     }
 
