@@ -6,6 +6,7 @@
         <groups>
             <run>
                 <include name="sanity"/>
+                <include name="search suite"/>
             </run>
         </groups>
         <classes>
