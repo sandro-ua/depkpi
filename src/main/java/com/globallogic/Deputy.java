@@ -7,19 +7,19 @@ public class Deputy {
     private String linkToProfile;
     private int pysmovaReestracia;
     private int illness;
-    private int usinessTrip;
+    private int businessTrip;
     private int unknown;
     private int present;
     private int absent;
 
 
-    public Deputy (String fullName, String party, String linkToProfile, int pysmovaReestracia, int illness, int usinessTrip, int unknown, int present, int absent) {
+    public Deputy (String fullName, String party, String linkToProfile, int pysmovaReestracia, int illness, int businessTrip, int unknown, int present, int absent) {
         this.fullName = fullName;
         this.party = party;
         this.linkToProfile = linkToProfile;
         this.pysmovaReestracia = pysmovaReestracia;
         this.illness = illness;
-        this.usinessTrip = usinessTrip;
+        this.businessTrip = businessTrip;
         this.unknown = unknown;
         this.present = present;
         this.absent = absent;
@@ -52,14 +52,6 @@ public class Deputy {
         this.linkToProfile = linkToProfile;
     }
 
-    public int getPysmovaReestracia() {
-        return pysmovaReestracia;
-    }
-
-    public void setPysmovaReestracia(int pysmovaReestracia) {
-        this.pysmovaReestracia = pysmovaReestracia;
-    }
-
     public int getIllness() {
         return illness;
     }
@@ -69,11 +61,11 @@ public class Deputy {
     }
 
     public int getUsinessTrip() {
-        return usinessTrip;
+        return businessTrip;
     }
 
     public void setUsinessTrip(int usinessTrip) {
-        this.usinessTrip = usinessTrip;
+        this.businessTrip = usinessTrip;
     }
 
     public int getUnknown() {

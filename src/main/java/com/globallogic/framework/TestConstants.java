@@ -15,4 +15,7 @@ public class TestConstants {
     public static final String XPATH_SEARCH_RESULTS_BLOCK = "//div[@id='search_results']/ul/li";
     public static final String XPATH_SEARCH_RESULTS_NUMBER = "//div[@class=\"information_block_ins\"]/h3/a[@class=\"show_section\"]";
     public static final String XPATH_SEARCH_GO_TO_TOP_ = "//ul[@class='search-filter-results search-filter-results-thumbnails']/li/p/a[@href='#top']";
+    public static final String XPATH_SEARCH_RESULTS_MESSAGE = "//div[@id=\"search_results\"]/p";
+    public static final String XPATH_DEPUTIES_NAMES = "//div[@id=\"search_results\"]/ul/li[%s]/p/a";
+    public static final String XPATH_DEPUTIES_PROFILE_LINKS = "//div[@id=\"search_results\"]/ul/li[%s]/p[@class=\"title\"]/a";
 }
