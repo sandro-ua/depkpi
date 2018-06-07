@@ -26,12 +26,14 @@ public class MyWebDriver {
             //System.setProperty("webdriver.chrome.driver", "src/resources/chromedriver.exe");
             //ChromeOptions chromeOptions = new ChromeOptions();
             //chromeOptions.setBinary("C:\\Users\\mylet\\AppData\\Local\\Google\\Chrome\\Application\\chrome.exe");
-            Instance = new ChromeDriver();
-            Instance.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
 
-/*         System.setProperty("webdriver.gecko.driver", "src/resources/geckodriver.exe");
-            Instance = new FirefoxDriver();
+
+/*            Instance = new ChromeDriver();
             Instance.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);*/
+
+            //System.setProperty("webdriver.gecko.driver", "src/resources/geckodriver.exe");
+            Instance = new FirefoxDriver();
+            Instance.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
        }
 
 
