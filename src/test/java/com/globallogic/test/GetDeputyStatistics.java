@@ -55,13 +55,13 @@ public class GetDeputyStatistics {
             allDeputies[n].setLinkToProfile(deputiesProfileLinks[n]);
             MyWebDriver.Instance.findElement(By.xpath(TestConstants.XPATH_PRESENCE)).click();
             MyWebDriver.Instance.findElement(By.className(TestConstants.XPATH_SEARCH_BUTTON)).click();
-            MyWebDriver.Instance.manage().timeouts().implicitlyWait(1, TimeUnit.SECONDS);
 
             //resolving StaleElementReferenceException
             Wait newWait = new WebDriverWait(MyWebDriver.Instance, 10);
             newWait.until(ExpectedConditions.visibilityOfElementLocated(By.id("s0")));
+
             MyWebDriver.Instance.findElement(By.id("s0")).click();
-            MyWebDriver.Instance.manage().timeouts().implicitlyWait(1, TimeUnit.SECONDS);
+
 
             List<WebElement> listPresence = MyWebDriver.Instance.findElements(By.xpath(TestConstants.XPATH_PRESENCE_NUM));
             if (listPresence != null && !listPresence.isEmpty()) {
@@ -72,8 +72,6 @@ public class GetDeputyStatistics {
             if (listAbsence != null && !listAbsence.isEmpty()) {
                 allDeputies[n].setAbsent(Integer.valueOf(listAbsence.get(0).getText()));
             }
-
-            MyWebDriver.Instance.manage().timeouts().implicitlyWait(1, TimeUnit.SECONDS);
         }
         System.out.println(Arrays.toString(deputiesNames));
 
