@@ -1,10 +1,12 @@
 package com.globallogic.framework;
 
+import org.openqa.selenium.By;
+
 public class TestConstants {
 
     public static final String LINK_DEPUTAT_LIST = "http://w1.c1.rada.gov.ua/pls/site2/p_deputat_list";
 
-    public static final String XPATH_PRESENCE = "//a[contains(text(), \"Реєстрація депутата за допомогою електронної системи\")]";
+    public static final By XPATH_PRESENCE = By.xpath("//a[contains(text(), \"Реєстрація депутата за допомогою електронної системи\")]");
     public static final String XPATH_SEARCH_BUTTON = "search_button1";
     public static final String XPATH_FULL_NAME = "//table[@class=\"simple_info\"]/tbody/tr[1]/td[2]/h2";
 

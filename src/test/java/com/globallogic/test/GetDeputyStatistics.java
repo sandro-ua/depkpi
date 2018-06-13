@@ -53,7 +53,7 @@ public class GetDeputyStatistics {
             allDeputies[n] = new Deputy();
             allDeputies[n].setFullName(MyWebDriver.Instance.findElement(By.xpath(TestConstants.XPATH_FULL_NAME)).getText());
             allDeputies[n].setLinkToProfile(deputiesProfileLinks[n]);
-            MyWebDriver.Instance.findElement(By.xpath(TestConstants.XPATH_PRESENCE)).click();
+            MyWebDriver.Instance.findElement(TestConstants.XPATH_PRESENCE).click();
             MyWebDriver.Instance.findElement(By.className(TestConstants.XPATH_SEARCH_BUTTON)).click();
 
             //resolving StaleElementReferenceException
