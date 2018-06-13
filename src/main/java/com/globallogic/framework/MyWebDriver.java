@@ -39,8 +39,7 @@ public class MyWebDriver {
             }
 
             //shutdown hook
-            Runtime.getRuntime().addShutdownHook(new Thread( () ->
-            {Instance.quit(); Instance = null;}));
+            //Runtime.getRuntime().addShutdownHook(new Thread( () -> {Instance.quit(); Instance = null;}));
 
 
         }
