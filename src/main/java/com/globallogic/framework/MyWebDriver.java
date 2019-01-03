@@ -40,8 +40,6 @@ public class MyWebDriver {
 
             //shutdown hook
             //Runtime.getRuntime().addShutdownHook(new Thread( () -> {Instance.quit(); Instance = null;}));
-
-
         }
 
     public static boolean isUnix() {
