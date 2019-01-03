@@ -94,6 +94,16 @@ public class SearchDeputyTests {
         Assert.assertEquals(deputyNumberTop, deputyNumberAtSearch, "Number of deputies are shown is incorrect.");
     }
 
+    @Test(groups = {"sanity"})
+    public void duplicated_test_6()
+    {
+        SearchDeputiesPage.GoToDeputyList();
+        int deputyNumberTop = SearchDeputiesPage.GetSearchResultsNumber();
+        int deputyNumberAtSearch = SearchDeputiesPage.GetSearchResultsNumber();
+
+        Assert.assertEquals(deputyNumberTop, deputyNumberAtSearch, "Number of deputies are shown is incorrect.");
+    }
+
     @AfterClass (alwaysRun = true)
     public static void TearDown()
     {
