@@ -33,7 +33,6 @@ public class MyWebDriver {
                 Instance.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
             }
             if (isWindows()) {
-                //System.setProperty("webdriver.gecko.driver", "src/resources/geckodriver.exe");
                 Instance = new FirefoxDriver();
                 Instance.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
             }
