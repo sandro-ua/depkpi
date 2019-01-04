@@ -29,6 +29,8 @@ public class MyWebDriver {
             FirefoxOptions fOptions = new FirefoxOptions();
             fOptions.setHeadless(true);
 
+            ChromeOptions cOptions = new ChromeOptions();
+            cOptions.setHeadless(true);
 
 
             if (isUnix()) {
@@ -36,7 +38,7 @@ public class MyWebDriver {
                 Instance.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
             }
             if (isWindows()) {
-                Instance = new FirefoxDriver(fOptions);
+                Instance = new ChromeDriver(cOptions);
                 Instance.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
             }
         }
