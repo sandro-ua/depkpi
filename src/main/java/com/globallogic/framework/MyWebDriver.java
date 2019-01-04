@@ -23,7 +23,7 @@ public class MyWebDriver {
         public static void Initialize() {
 
             WebDriverManager.chromedriver().setup();
-
+            WebDriverManager.firefoxdriver().setup();
             /*System.setProperty("webdriver.chrome.driver", "src/resources/chromedriver.exe");
             ChromeOptions chromeOptions = new ChromeOptions();
             chromeOptions.setBinary("C:\\Users\\mylet\\AppData\\Local\\Google\\Chrome\\Application\\chrome.exe");*/

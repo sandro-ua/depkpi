@@ -95,13 +95,13 @@ public class SearchDeputyTests {
     }
 
     @Test(groups = {"sanity"})
-    public void duplicated_test_6()
+    public void duplicated_test_6_Negative()
     {
         SearchDeputiesPage.GoToDeputyList();
         int deputyNumberTop = SearchDeputiesPage.GetSearchResultsNumber();
         int deputyNumberAtSearch = SearchDeputiesPage.GetSearchResultsNumber();
 
-        Assert.assertEquals(deputyNumberTop, deputyNumberAtSearch, "Number of deputies are shown is incorrect.");
+        Assert.assertNotEquals(deputyNumberTop, deputyNumberAtSearch, "Number of deputies are shown is incorrect.");
     }
 
     @AfterClass (alwaysRun = true)
