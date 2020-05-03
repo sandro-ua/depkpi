@@ -2,40 +2,40 @@ package com.globallogic.test;
 
 import com.globallogic.framework.MyWebDriver;
 import com.globallogic.framework.SearchDeputiesPage;
-import org.testng.Assert;
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.Test;
+import org.junit.AfterClass;
+import org.junit.Assert;
+import org.junit.BeforeClass;
+import org.junit.Test;
 
 
 public class SearchDeputyTests {
 
-    @BeforeClass (alwaysRun = true)
+    @BeforeClass()
     public static void Setup() {
         MyWebDriver.Initialize();
     }
 
-    @Test(groups = {"sanity"})
+    @Test()
     public void SearchResultNumberIsTheSameAsDeclaredDeputyNumber()
     {
         SearchDeputiesPage.GoToDeputyList();
         int deputyNumberTop = SearchDeputiesPage.GetSearchResultsNumber();
         int deputyNumberAtSearch = SearchDeputiesPage.GetSearchResultsNumber();
 
-        Assert.assertEquals(deputyNumberTop, deputyNumberAtSearch, "Number of deputies are shown incorrect.");
+        Assert.assertEquals("Number of deputies are shown incorrect.", deputyNumberTop, deputyNumberAtSearch);
     }
 
-    @Test(groups = {"sanity"})
+    @Test()
     public void SearchResultNumberIsTheSameAsActuallyDisplayed()
     {
         SearchDeputiesPage.GoToDeputyList();
         int deputyNumberAtSearch  = SearchDeputiesPage.GetDeclaredDeputiesNumber();
         int actualDeputiesAtSearch = SearchDeputiesPage.SearchResultsBlockCount();
 
-        Assert.assertEquals(deputyNumberAtSearch, actualDeputiesAtSearch, "Search result items number is not the same as declared.");
+        Assert.assertEquals("Search result items number is not the same as declared.", deputyNumberAtSearch, actualDeputiesAtSearch);
     }
 
-    @Test (groups = {"search suite"})
+    @Test ()
     public void GoToTopCount () {
         SearchDeputiesPage.GoToDeputyList();
         int deputyNumberAtSearch  = SearchDeputiesPage.GetDeclaredDeputiesNumber();
@@ -44,67 +44,67 @@ public class SearchDeputyTests {
         Assert.assertEquals(deputyNumberAtSearch, GoToTopNumber);
     }
 
-    @Test(groups = {"sanity"})
+    @Test()
     public void duplicated_test_1()
     {
         SearchDeputiesPage.GoToDeputyList();
         int deputyNumberTop = SearchDeputiesPage.GetSearchResultsNumber();
         int deputyNumberAtSearch = SearchDeputiesPage.GetSearchResultsNumber();
 
-        Assert.assertEquals(deputyNumberTop, deputyNumberAtSearch, "Number of deputies are shown is incorrect.");
+        Assert.assertEquals("Number of deputies are shown is incorrect.", deputyNumberTop, deputyNumberAtSearch);
     }
 
-    @Test(groups = {"sanity"})
+    @Test()
     public void duplicated_test_2()
     {
         SearchDeputiesPage.GoToDeputyList();
         int deputyNumberTop = SearchDeputiesPage.GetSearchResultsNumber();
         int deputyNumberAtSearch = SearchDeputiesPage.GetSearchResultsNumber();
 
-        Assert.assertEquals(deputyNumberTop, deputyNumberAtSearch, "Number of deputies are shown is incorrect.");
+        Assert.assertEquals("Number of deputies are shown is incorrect.", deputyNumberTop, deputyNumberAtSearch);
     }
 
-    @Test(groups = {"sanity"})
+    @Test()
     public void duplicated_test_3()
     {
         SearchDeputiesPage.GoToDeputyList();
         int deputyNumberTop = SearchDeputiesPage.GetSearchResultsNumber();
         int deputyNumberAtSearch = SearchDeputiesPage.GetSearchResultsNumber();
 
-        Assert.assertEquals(deputyNumberTop, deputyNumberAtSearch, "Number of deputies are shown is incorrect.");
+        Assert.assertEquals("Number of deputies are shown is incorrect.", deputyNumberTop, deputyNumberAtSearch);
     }
 
-    @Test(groups = {"sanity"})
+    @Test()
     public void duplicated_test_4()
     {
         SearchDeputiesPage.GoToDeputyList();
         int deputyNumberTop = SearchDeputiesPage.GetSearchResultsNumber();
         int deputyNumberAtSearch = SearchDeputiesPage.GetSearchResultsNumber();
 
-        Assert.assertEquals(deputyNumberTop, deputyNumberAtSearch, "Number of deputies are shown is incorrect.");
+        Assert.assertEquals("Number of deputies are shown is incorrect.", deputyNumberTop, deputyNumberAtSearch);
     }
 
-    @Test(groups = {"sanity"})
+    @Test()
     public void duplicated_test_5()
     {
         SearchDeputiesPage.GoToDeputyList();
         int deputyNumberTop = SearchDeputiesPage.GetSearchResultsNumber();
         int deputyNumberAtSearch = SearchDeputiesPage.GetSearchResultsNumber();
 
-        Assert.assertEquals(deputyNumberTop, deputyNumberAtSearch, "Number of deputies are shown is incorrect.");
+        Assert.assertEquals("Number of deputies are shown is incorrect.", deputyNumberTop, deputyNumberAtSearch);
     }
 
-    @Test(groups = {"sanity"})
+    @Test()
     public void duplicated_test_6_Negative()
     {
         SearchDeputiesPage.GoToDeputyList();
         int deputyNumberTop = SearchDeputiesPage.GetSearchResultsNumber();
         int deputyNumberAtSearch = SearchDeputiesPage.GetSearchResultsNumber();
 
-        Assert.assertNotEquals(deputyNumberTop, deputyNumberAtSearch, "Number of deputies are shown is incorrect.");
+        Assert.assertNotEquals("Number of deputies are shown is incorrect.", deputyNumberTop, deputyNumberAtSearch );
     }
 
-    @AfterClass (alwaysRun = true)
+    @AfterClass()
     public static void TearDown()
     {
         MyWebDriver.Instance.quit();
